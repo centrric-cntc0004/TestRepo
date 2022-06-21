@@ -4,10 +4,10 @@ import hardSet from 'redux-persist/lib/stateReconciler/hardSet'
 import AsyncStorage from '@react-native-community/async-storage'
 import thunk from 'redux-thunk'
 import userLogin from '../modules/authentication/api/reducer'
-
+import team from '../modules/home/api/reducer'
 
 const appReducer = combineReducers({
-    userLogin
+    userLogin, team
 })
 
 const rootReducer = (state, action) => {

@@ -35,6 +35,22 @@ export default async function request(type, url, params, success, failed) {
                 })
 
 
+        case 'get':
+            return axios.get(url)
+                .then(response => {
+
+                    if (success) {
+                        success(response.data)
+                    }
+                    return response.data
+                })
+                .catch(async error => {
+
+
+                    if (failed) { failed() }
+                    return []
+                })
+
 
 
 
